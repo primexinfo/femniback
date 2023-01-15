@@ -1,0 +1,5 @@
+{
+    "require": {
+        "shipu/php-aamarpay-payment": "^1.2"
+    }
+}
