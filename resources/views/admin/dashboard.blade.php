@@ -4,47 +4,107 @@
 <div class="content-area">
     @include('includes.form-success')
 
-    @if($activation_notify != "")
-    <div class="alert alert-danger validation">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
-                aria-hidden="true">×</span></button>
-        <h3 class="text-center">{!! $activation_notify !!}</h3>
-    </div>
-    @endif
-
-
-
-
-
     <div class="row row-cards-one">
-
-        <div class="col-md-6 col-lg-6 col-xl-6">
-            <div class="card">
-                <h5 class="card-header">{{ __('Top Referrals') }}</h5>
-                <div class="card-body">
-                    <div class="admin-fix-height-card">
-                         <div id="chartContainer-topReference"></div>
+            <div class="col-md-12 col-lg-6 col-xl-4">
+                <div class="mycard bg1">
+                    <div class="left">
+                        <h5 class="title">{{ __('Sliders') }} </h5>
+                        <span class="number">{{count($sliders)}}</span>
+                        
                     </div>
-                       
+                    <div class="right d-flex align-self-center">
+                        <div class="icon">
+                            <i class="icofont-list"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-6 col-xl-4">
+                <div class="mycard bg2">
+                    <div class="left">
+                        <h5 class="title">{{ __('Users') }}</h5>
+                        <span class="number">{{count($users)}}</span>
+                        
+                    </div>
+                    <div class="right d-flex align-self-center">
+                        <div class="icon">
+                            <i class="icofont-user-alt-5"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-6 col-xl-4">
+                <div class="mycard bg3">
+                    <div class="left">
+                        <h5 class="title">{{ __('Blogs') }}</h5>
+                        <span class="number">{{count($blogs)}}</span>
+                        
+                    </div>
+                    <div class="right d-flex align-self-center">
+                        <div class="icon">
+                            <i class="icofont-blogger"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-6 col-xl-4">
+                <div class="mycard bg4">
+                    <div class="left">
+                        <h5 class="title">{{ __('Appointments') }}</h5>
+                        <span class="number">{{count($appoints)}}</span>
+                        
+                    </div>
+                    <div class="right d-flex align-self-center">
+                        <div class="icon">
+                            <i class="icofont-calendar"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-6 col-xl-4">
+                <div class="mycard bg5">
+                    <div class="left">
+                        <h5 class="title">{{ __('Subscribers') }}</h5>
+                        <span class="number">{{count($subscribers)}}</span>
+                        
+                    </div>
+                    <div class="right d-flex align-self-center">
+                        <div class="icon">
+                            <i class="icofont-users"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-6 col-xl-4">
+                <div class="mycard bg6">
+                    <div class="left">
+                        <h5 class="title">{{ __('Testimonials') }}</h5>
+                        <span class="number">{{count($testimonials)}}</span>
+                        
+                    </div>
+                    <div class="right d-flex align-self-center">
+                        <div class="icon">
+                            <i class="icofont-speech-comments"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-6 col-xl-4">
+                <div class="mycard bg1">
+                    <div class="left">
+                        <h5 class="title">{{ __('Services') }}</h5>
+                        <span class="number">{{count($services)}}</span>
+                        
+                    </div>
+                    <div class="right d-flex align-self-center">
+                        <div class="icon">
+                            <i class="icofont-speech-comments"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
 
         </div>
-
-        <div class="col-md-6 col-lg-6 col-xl-6">
-                <div class="card">
-                        <h5 class="card-header">{{ __('Most Used OS') }}</h5>
-                        <div class="card-body">
-        <div class="admin-fix-height-card">
-                        <div id="chartContainer-os"></div>
-</div>
-                        </div>
-                    </div>
-        </div>
-        
-    </div>
-
-
 
 </div>
 
