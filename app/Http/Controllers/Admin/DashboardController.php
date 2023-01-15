@@ -9,12 +9,13 @@ use Illuminate\Support\Facades\Input;
 use InvalidArgumentException;
 use Validator;
 use Illuminate\Support\Facades\Hash;
-use App\Models\Order;
 use App\Models\Blog;
 use App\Models\User;
 use App\Models\ApptTime;
-use App\Models\Product;
-use App\Models\Counter;
+use App\Models\Slider;
+use App\Models\Subscriber;
+use App\Models\Review;
+use App\Models\Service;
 use Carbon\Carbon;
 
 class DashboardController extends Controller
