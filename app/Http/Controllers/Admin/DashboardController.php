@@ -26,42 +26,13 @@ class DashboardController extends Controller
 
     public function index()
     {
-        $pending = Order::where('status','=','pending')->get();
-        $processing = Order::where('status','=','processing')->get();
-        $completed = Order::where('status','=','completed')->get();
-        $days = "";
-        $sales = "";
-        for($i = 0; $i < 30; $i++) {
-            $days .= "'".date("d M", strtotime('-'. $i .' days'))."',";
-
-            $sales .=  "'".Order::where('status','=','completed')->whereDate('created_at', '=', date("Y-m-d", strtotime('-'. $i .' days')))->count()."',";
-        }
         $users = User::all();
         $blogs = Blog::all();
-        $rorders = Order::orderBy('id','desc')->take(5)->get();
-        $rusers = User::orderBy('id','desc')->take(5)->get();
-        $referrals = Counter::where('type','referral')->orderBy('total_count','desc')->take(5)->get();
-        $browsers = Counter::where('type','browser')->orderBy('total_count','desc')->take(5)->get();
-        
-        // daily infos
-        $todays_total_orders = Order::whereDate('created_at', Carbon::today())->get();
-        $todays_total_payment = 0;
-        foreach ($todays_total_orders as $orders){ 
-            if($orders->payment_status == 'Completed'){
-                $todays_total_payment += $orders->pay_amount;
-            }
-        }
-
-        $activation_notify = "";
-        if (file_exists(public_path().'/rooted.txt')){
-            $rooted = file_get_contents(public_path().'/rooted.txt');
-            if ($rooted < date('Y-m-d', strtotime("+10 days"))){
-                $activation_notify = "<i class='icofont-warning-alt icofont-4x'></i><br>Please activate your system.<br> If you do not activate your system now, it will be inactive on ".$rooted."!!<br><a href='".url('/admin/activation')."' class='btn btn-success'>Activate Now</a>";
-            }
-        }
-
-
-        return view('admin.dashboard',compact('todays_total_payment','todays_total_orders','pending','activation_notify','processing','completed','users','blogs','days','sales','rorders','rusers','referrals','browsers'));
+        $appoints = ApptTime::get();
+        $subscribers = Subscriber::get();
+        $testimonials = Review::get();
+        $services = Service::get();
+        return view('admin.dashboard',compact('users','blogs','sliders','appoints','subscribers','testimonials','services'));
     }
     
     public function tdayproducts()
