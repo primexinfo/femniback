@@ -104,7 +104,7 @@
     function displayLineChart() {
         var data = {
             labels: [
-            {!!$days!!}
+            
             ],
             datasets: [{
                 label: "Prime and Fibonacci",
