@@ -6,20 +6,6 @@
 
     <div class="row row-cards-one">
             <div class="col-md-12 col-lg-6 col-xl-4">
-                <div class="mycard bg1">
-                    <div class="left">
-                        <h5 class="title">{{ __('Sliders') }} </h5>
-                        <span class="number">{{count($sliders)}}</span>
-                        
-                    </div>
-                    <div class="right d-flex align-self-center">
-                        <div class="icon">
-                            <i class="icofont-list"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12 col-lg-6 col-xl-4">
                 <div class="mycard bg2">
                     <div class="left">
                         <h5 class="title">{{ __('Users') }}</h5>

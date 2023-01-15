@@ -34,7 +34,7 @@ class DashboardController extends Controller
         $subscribers = Subscriber::get();
         $testimonials = Review::get();
         $services = Service::get();
-        return view('admin.dashboard',compact('users','blogs','sliders','appoints','subscribers','testimonials','services'));
+        return view('admin.dashboard',compact('users','blogs','appoints','subscribers','testimonials','services'));
     }
     
     public function tdayproducts()
