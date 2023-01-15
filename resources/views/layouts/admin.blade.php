@@ -121,7 +121,7 @@
 						</li> -->
 						
 						<li>
-							<a href="{{ route(''admin.dashboard'') }}">
+							<a href="{{ route('admin.dashboard') }}">
 								<i class="fas fa-fw fa-newspaper"></i><span>{{ __('Dashboard') }}</span>
 							</a>
 						</li>
