@@ -105,7 +105,7 @@
 					<ul class="list-unstyled components" id="accordion">
 						
 						@if(Auth::guard('admin')->user()->role != 'posAdmin')				
-						<li>
+						<!-- <li>
 							<a href="#blog" class="accordion-toggle wave-effect" data-toggle="collapse"
 								aria-expanded="false">
 								<i class="fas fa-fw fa-newspaper"></i>{{ __('Blog') }}
@@ -118,8 +118,13 @@
 									<a href="{{ route('admin-blog-index') }}"><span>{{ __('Posts') }}</span></a>
 								</li>
 							</ul>
-						</li>
+						</li> -->
 						
+						<li>
+							<a href="{{ route(''admin.dashboard'') }}">
+								<i class="fas fa-fw fa-newspaper"></i><span>{{ __('Dashboard') }}</span>
+							</a>
+						</li>
 						<li>
 							<a href="{{ route('admin-service-index') }}">
 								<i class="fas fa-fw fa-newspaper"></i><span>{{ __('Programm') }}</span>
@@ -140,12 +145,12 @@
 								<i class="fas fa-cogs"></i>{{ __('General Settings') }}
 							</a>
 							<ul class="collapse list-unstyled" id="general" data-parent="#accordion">
-								<li>
+								<!-- <li>
 									<a href="{{ route('admin-gs-logo') }}"><span>{{ __('Logo') }}</span></a>
 								</li>
 								<li>
 									<a href="{{ route('admin-gs-fav') }}"><span>{{ __('Favicon') }}</span></a>
-								</li>
+								</li> -->
 								<li>
 									<a href="{{ route('admin-gs-load') }}"><span>{{ __('Loader') }}</span></a>
 								</li>
@@ -161,7 +166,7 @@
 						@endif
 
 
-						<li>
+						<!-- <li>
 							<a href="#homepage" class="accordion-toggle wave-effect" data-toggle="collapse"
 								aria-expanded="false">
 								<i class="fas fa-edit"></i>{{ __('Home Page Settings') }}
@@ -175,13 +180,13 @@
 										href="{{ route('admin-ps-customize') }}"><span>{{ __('Home Page Customization') }}</span></a>
 								</li>
 							</ul>
-						</li>
+						</li> -->
 
 
 						@if(Auth::guard('admin')->user()->IsAdmin())
 
 
-						<li>
+						<!-- <li>
 							<a href="#menu" class="accordion-toggle wave-effect" data-toggle="collapse"
 								aria-expanded="false">
 								<i class="fas fa-file-code"></i>{{ __('Menu Page Settings') }}
@@ -198,9 +203,9 @@
 									<a href="{{ route('admin-page-index') }}"><span>{{ __('Other Pages') }}</span></a>
 								</li>
 							</ul>
-						</li>
+						</li> -->
 						
-						<li>
+						<!-- <li>
 							<a href="#socials" class="accordion-toggle wave-effect" data-toggle="collapse"
 								aria-expanded="false">
 								<i class="fas fa-paper-plane"></i>{{ __('Social Settings') }}
@@ -214,7 +219,7 @@
 								<li><a href="{{route('admin-social-google')}}"><span>{{ __('Google Login') }}</span></a>
 								</li>
 							</ul>
-						</li>
+						</li> -->
 
 						
 
