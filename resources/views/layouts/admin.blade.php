@@ -165,6 +165,12 @@
 
 						@endif
 
+						<li>
+							<a href="https://soft.femnivision.com" target="_blank">
+								<i class="fas fa-fw fa-newspaper"></i><span>Appointment</span>
+							</a>
+						</li>
+
 
 						<!-- <li>
 							<a href="#homepage" class="accordion-toggle wave-effect" data-toggle="collapse"
